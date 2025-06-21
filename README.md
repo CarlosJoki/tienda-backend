@@ -2,7 +2,7 @@ El propósito principal es del backend es ofrecer una API REST que el frontend p
 
 La estructura del backend es la siguiente:
 
---> controller (Capa de Presentación)
+# --> controller (Capa de Presentación)
 
 Propósito: Recibe las peticiones HTTP del exterior y las dirige al servicio correspondiente. Define los endpoints de la API.
 
@@ -13,7 +13,7 @@ VentaController.java: Gestiona las rutas para Ventas.
 
 Anotaciones: @RestController indica que la clase manejará peticiones REST. @RequestMapping("/api/...") define la ruta base para los endpoints de la clase. @CrossOrigin permite las peticiones desde tu frontend.
 
---> service (Capa de Lógica de Negocio)
+# --> service (Capa de Lógica de Negocio)
 
 Propósito: Contiene la lógica de negocio de la aplicación. Actúa como intermediario entre los controladores y los repositorios.
 
@@ -24,7 +24,7 @@ VentaService.java: Lógica para operaciones de ventas.
 
 Anotaciones: @Service indica que es un componente de servicio gestionado por Spring.
 
---> repository (Capa de Acceso a Datos)
+# --> repository (Capa de Acceso a Datos)
 
 Propósito: Define la interfaz para interactuar con la base de datos.
 
@@ -35,7 +35,7 @@ VentaRepository.java: Interfaz para los datos de ventas.
 
 Tecnología: Extienden de MongoRepository, lo que les da superpoderes para hablar con MongoDB sin escribir consultas explícitas.
 
---> model (Capa de Modelo de Datos)
+# --> model (Capa de Modelo de Datos)
 
 Propósito: Define las entidades de datos, es decir, la estructura de los objetos que se guardarán en la base de datos.
 
